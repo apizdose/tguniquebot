@@ -1,6 +1,6 @@
 FROM python:slim
 
-RUN pip install -r requirements.txt
 WORKDIR /tgbot 
 COPY . .
+RUN pip install -r requirements.txt && mkdir photos
 ENTRYPOINT ["python", "tgbot.py"]
